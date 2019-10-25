@@ -1,6 +1,6 @@
 {
   "name": "language-fift",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Fift language support for Atom",
   "repository": {
     "type": "git",
