@@ -1,19 +1,19 @@
 {
-  "name": "language-forth",
-  "version": "0.5.0",
-  "description": "Forth language support for Atom",
+  "name": "language-fift",
+  "version": "0.0.1",
+  "description": "Fift language support for Atom",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mpgirro/atom-language-forth"
+    "url": "https://github.com/Kyborg2011/atom-language-fift"
   },
   "bugs": {
-    "url": "https://github.com/mpgirro/atom-language-forth/issues"
+    "url": "https://github.com/Kyborg2011/atom-language-fift/issues"
   },
-  "homepage": "https://github.com/mpgirro/atom-language-forth",
-  "readme": "# Forth language support for Atom\n\nAdds syntax highlighting for Forth files to Atom.",
+  "homepage": "https://github.com/Kyborg2011/atom-language-fift",
+  "readme": "# Fift language support for Atom\n\nAdds syntax highlighting for Fift files to Atom.",
   "readmeFilename": "README.md",
   "author": {
-    "name": "Maximilian Irro"
+    "name": "Anton Babinin"
   },
   "license": "MIT",
   "engines": {

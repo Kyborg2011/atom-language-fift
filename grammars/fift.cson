@@ -1,72 +1,67 @@
 'fileTypes': [
-  'frt'
-  'fth'
-  'fs'
-  '4th'
-  'forth',
-  'f'
+  'fif'
 ]
 'foldingStartMarker': '/\\*\\*|\\{\\s*$'
 'foldingStopMarker': '\\*\\*/|^\\s*\\}'
-'name': 'Forth'
+'name': 'Fift'
 'patterns': [
   {
-    'include': '#forth'
+    'include': '#fift'
   }
 ]
 'repository':
   'comment':
     'patterns': [
       {
-        'comment': 'line comments for iForth'
+        'comment': 'line comments for iFift'
         'match': '(?<=^|\\s)(--\\s.*$)'
-        'name': 'comment.line.double-dash.forth'
+        'name': 'comment.line.double-dash.fift'
       }
       {
         'comment': 'ANSI line comment'
         'match': '(?<=^|\\s)(\\\\[\\s\\S]*$)'
-        'name': 'comment.line.backslash.forth'
+        'name': 'comment.line.backslash.fift'
       }
       {
-        'comment': 'gForth line comment'
+        'comment': 'gFift line comment'
         'match': '(?<=^|\\s)(\\\\[Gg] .*$)'
-        'name': 'comment.line.backslash-g.forth'
+        'name': 'comment.line.backslash-g.fift'
       }
       {
         'begin': '(?<=^|\\s)(\\(\\*)(?=\\s)'
-        'comment': 'multiline comments for iForth'
+        'comment': 'multiline comments for iFift'
         'end': '(?<=^|\\s)(\\*\\))(?=\\s)'
-        'name': 'comment.block.forth'
+        'name': 'comment.block.fift'
       }
       {
         'begin': '\\b(?i:DOC)\\b'
-        'comment': 'documentation comments for iForth'
+        'comment': 'documentation comments for iFift'
         'end': '\\b(?i:ENDDOC)\\b'
-        'name': 'comment.block.documentation.forth'
+        'name': 'comment.block.documentation.fift'
       }
       {
         'begin': '(?<=^|\\s)\\(\\s'
         'comment': 'ANSI line comment'
         'end': '\\)'
-        'name': 'comment.line.parentheses.forth'
+        'name': 'comment.line.parentheses.fift'
       }
     ]
   'constant':
     'patterns': [
       {
         'match': '(?i:(?<=^|\\s)(TRUE|FALSE|BL|PI|CELL|C/L|R/O|W/O|R/W)(?=\\s))'
-        'name': 'constant.language.forth'
+        'name': 'constant.language.fift'
       }
       {
         'match': '(?<=^|\\s)([$#%]?[-+]?[0-9]+(\\.[0-9]*e(-?[0-9]+)|\\.?[0-9a-fA-F]*))(?=\\s)'
-        'name': 'constant.numeric.forth'
+        'name': 'constant.numeric.fift'
       }
       {
         'match': '(?<=^|\\s)(([&^]\\S)|(("|\')\\S("|\')))(?=\\s)'
-        'name': 'constant.character.forth'
+        'name': 'constant.character.fift'
       }
     ]
-  'forth':
+  'fift':
     'patterns': [
       {
         'include': '#constant'
@@ -100,9 +95,9 @@
         'match': '(?<=^|\\s)(?i:(2CONSTANT|2VARIABLE|ALIAS|CONSTANT|CREATE-INTERPRET/COMPILE[:]?|CREATE|DEFER|FCONSTANT|FIELD|FVARIABLE|USER|VALUE|VARIABLE|VOCABULARY))\\s+(\\S+)(?=\\s)'
         'captures':
           '1':
-            'name': 'storage.type.forth'
+            'name': 'storage.type.fift'
           '2':
-            'name': 'entity.name.function.forth'
+            'name': 'entity.name.function.fift'
       }
     ]
   'string':
@@ -110,76 +105,76 @@
       {
         'comment': ''
         'match': '(?i:((?<=ABORT" )|(?<=BREAK" )|(?<=\\." )|(C" )|(0")|(S\\\\?" )))[^"]+"'
-        'name': 'string.quoted.double.forth'
+        'name': 'string.quoted.double.fift'
       }
       {
         'comment': ''
         'match': '(?i:((?<=INCLUDE)|(?<=NEEDS)|(?<=REQUIRE)|(?<=USE)))[ ]\\S+(?=\\s)'
-        'name': 'string.unquoted.forth'
+        'name': 'string.unquoted.fift'
       }
     ]
   'variable':
     'patterns': [
       {
         'match': '\\b(?i:I|J|K)\\b'
-        'name': 'variable.language.forth'
+        'name': 'variable.language.fift'
       }
     ]
   'word':
     'patterns': [
       {
         'match': '(?<=^|\\s)\\[(?i:(NIP|TUCK|ROT|SWAP|DUP|OVER|DROP|2SWAP|2DUP|2DROP|FNIP|FTUCK|FROT|FSWAP|FDUP|FOVER|FDROP|F2SWAP|F2DUP|F2DROP))\\](?=\\s)'
-        'name': 'keyword.other.word.forth'
+        'name': 'keyword.other.word.fift'
       }
       {
         'match': '(?<=^|\\s)\\[(?i:(F\+|F-|F\*|F\*\*|FSQRT|F/|F\.S))\\](?=\\s)'
-        'name': 'keyword.other.word.forth'
+        'name': 'keyword.other.word.fift'
       }
       {
         'match': '(?<=^|\\s)\\[(?i:(EXECUTE|ABORT|CATCH|C@|F@|>R|R>|!|/MOD|MOD))\\](?=\\s)'
-        'name': 'keyword.other.word.forth'
+        'name': 'keyword.other.word.fift'
       }
       {
         'match': '(?<=^|\\s)\\[(?i:(\\?DO|\\+LOOP|AGAIN|BEGIN|DEFINED|DO|ELSE|ENDIF|FOR|IF|IFDEF|IFUNDEF|LOOP|NEXT|REPEAT|THEN|UNTIL|WHILE))\\](?=\\s)'
-        'name': 'keyword.control.immediate.forth'
+        'name': 'keyword.control.immediate.fift'
       }
       {
         'match': '(?<=^|\\s)(?i:(COMPILE-ONLY|IMMEDIATE|IS|RESTRICT|TO|WHAT\'S|]))(?=\\s)'
-        'name': 'keyword.operator.immediate.forth'
+        'name': 'keyword.operator.immediate.fift'
       }
       {
         'match': '(?<=^|\\s)(?i:(-DO|\\-LOOP|\\?DO|\\?LEAVE|\\+DO|\\+LOOP|ABORT\\"|AGAIN|AHEAD|BEGIN|CASE|DO|ELSE|ENDCASE|ENDIF|ENDOF|ENDTRY\\-IFERROR|ENDTRY|FOR|IF|IFERROR|LEAVE|LOOP|NEXT|RECOVER|REPEAT|RESTORE|THEN|TRY|U\\-DO|U\\+DO|UNTIL|WHILE))(?=\\s)'
-        'name': 'keyword.control.compile-only.forth'
+        'name': 'keyword.control.compile-only.fift'
       }
       {
         'match': '(?<=^|\\s)(?i:(\\?DUP-0=-IF|\\?DUP-IF|\\)|\\[|\\[\'\\]|\\[CHAR\\]|\\[COMPILE\\]|\\[IS\\]|\\[TO\\]|<COMPILATION|<INTERPRETATION|ASSERT\\(|ASSERT0\\(|ASSERT1\\(|ASSERT2\\(|ASSERT3\\(|COMPILATION>|DEFERS|DOES>|INTERPRETATION>|OF|POSTPONE))(?=\\s)'
-        'name': 'keyword.other.compile-only.forth'
+        'name': 'keyword.other.compile-only.fift'
       }
       {
         'match': '(?<=^|\\s)(?i:(\'|<IS>|<TO>|CHAR|END-STRUCT|INCLUDE[D]?|LOAD|NEEDS|REQUIRE[D]?|REVISION|SEE|STRUCT|THRU|USE))(?=\\s)'
-        'name': 'keyword.other.non-immediate.forth'
+        'name': 'keyword.other.non-immediate.fift'
       }
       {
         'match': '(?<=^|\\s)(?i:(~~|BREAK:|BREAK"|DBG))(?=\\s)'
-        'name': 'keyword.other.warning.forth'
+        'name': 'keyword.other.warning.fift'
       }
     ]
   'word-def':
     'begin': '(^:|\\s:)\\s(\\S+)\\s|(?i:(:NONAME))'
     'beginCaptures':
       '1':
-        'name': 'keyword.other.compile-only.forth'
+        'name': 'keyword.other.compile-only.fift'
       '2':
-        'name': 'entity.name.function.forth'
+        'name': 'entity.name.function.fift'
       '3':
-        'name': 'keyword.other.compile-only.forth'
+        'name': 'keyword.other.compile-only.fift'
       '4':
-        'name': 'keyword.other.word.forth'
+        'name': 'keyword.other.word.fift'
     'end': '(?<=^|\\s)(;(?i:CODE)?)(?=\\s)'
     'endCaptures':
       '0':
-        'name': 'keyword.other.compile-only.forth'
-    'name': 'meta.block.forth'
+        'name': 'keyword.other.compile-only.fift'
+    'name': 'meta.block.fift'
     'patterns': [
       {
         'include': '#constant'
@@ -204,16 +199,16 @@
     'begin': '(^code|\\scode)\\s(\\S+)\\s'
     'beginCaptures':
       '1':
-        'name': 'keyword.other.compile-only.forth'
+        'name': 'keyword.other.compile-only.fift'
       '2':
-        'name': 'entity.name.function.forth'
+        'name': 'entity.name.function.fift'
       '3':
-        'name': 'keyword.other.word.forth'
+        'name': 'keyword.other.word.fift'
     'end': '(?<=^|\\s)(end-code)(?=\\s)'
     'endCaptures':
       '0':
-        'name': 'keyword.other.compile-only.forth'
-    'name': 'meta.block.forth'
+        'name': 'keyword.other.compile-only.fift'
+    'name': 'meta.block.fift'
     'patterns': [
       {
         'include': '#constant'
@@ -234,4 +229,4 @@
         'include': '#storage'
       }
     ]
-'scopeName': 'source.forth'
+'scopeName': 'source.fift'
