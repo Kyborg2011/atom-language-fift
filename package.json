@@ -1,10 +1,10 @@
 {
   "name": "language-fift",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "Fift language support for Atom",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kyborg2011/atom-language-fift"
+    "url": "git@github.com:Kyborg2011/atom-language-fift.git"
   },
   "bugs": {
     "url": "https://github.com/Kyborg2011/atom-language-fift/issues"
